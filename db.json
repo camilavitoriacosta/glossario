@@ -1,0 +1,66 @@
+{
+  "termos": [
+    [
+      {
+        "id": 1,
+        "termo": "git clone",
+        "descricao": "O comando git clone é utilizado para clonar um repositório Git existente para uma nova pasta de trabalho local.",
+        "link": "https://git-scm.com/docs/git-clone"
+      },
+      {
+        "id": 2,
+        "termo": "git commit",
+        "descricao": "O comando git commit é utilizado para criar um novo commit contendo as mudanças que foram realizadas em um repositório local.",
+        "link": "https://git-scm.com/docs/git-commit"
+      },
+      {
+        "id": 3,
+        "termo": "git push",
+        "descricao": "O comando git push é utilizado para enviar as mudanças que foram realizadas em um repositório local para um repositório remoto.",
+        "link": "https://git-scm.com/docs/git-push"
+      },
+      {
+        "id": 4,
+        "termo": "git pull",
+        "descricao": "O comando git pull é utilizado para atualizar um repositório local com as mudanças que foram feitas em um repositório remoto.",
+        "link": "https://git-scm.com/docs/git-pull"
+      },
+      {
+        "id": 5,
+        "termo": "git branch",
+        "descricao": "O comando git branch é utilizado para criar, listar ou excluir branches (ramificações) em um repositório Git.",
+        "link": "https://git-scm.com/docs/git-branch"
+      },
+      {
+        "id": 6,
+        "termo": "git checkout",
+        "descricao": "O comando git checkout é utilizado para alternar entre branches ou restaurar arquivos em um repositório Git.",
+        "link": "https://git-scm.com/docs/git-checkout"
+      },
+      {
+        "id": 7,
+        "termo": "git merge",
+        "descricao": "O comando git merge é utilizado para combinar as alterações de diferentes branches em um único branch.",
+        "link": "https://git-scm.com/docs/git-merge"
+      },
+      {
+        "id": 8,
+        "termo": "git status",
+        "descricao": "O comando git status exibe o estado atual do repositório, mostrando os arquivos modificados, adicionados ou removidos.",
+        "link": "https://git-scm.com/docs/git-status"
+      },
+      {
+        "id": 9,
+        "termo": "git log",
+        "descricao": "O comando git log mostra o histórico de commits do repositório, exibindo informações como autor, data e mensagem dos commits.",
+        "link": "https://git-scm.com/docs/git-log"
+      },
+      {
+        "id": 10,
+        "termo": "git remote",
+        "descricao": "O comando git remote é utilizado para gerenciar conexões remotas do repositório, como adicionar, remover ou listar repositórios remotos.",
+        "link": "https://git-scm.com/docs/git-remote"
+      }
+    ]    
+  ]
+}
