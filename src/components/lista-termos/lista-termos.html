@@ -1,0 +1,10 @@
+<template>
+  <div class="container-termo" repeat.for="termo of termos">
+    <div class="container-termo-cabecalho">
+      <a href="${termo.link}" class="container-termo-cabecalho-link"> icone </a>
+      <h1 class="container-termo-cabecalho-titulo"> ${termo.termo} </h1>
+    </div>
+    <hr>
+    <p class="container-termo-descricao"> ${termo.descricao} </p>
+  </div>
+</template>
