@@ -3,7 +3,6 @@ import { TermoApi } from '../../termo-api';
 
 @inject(TermoApi)
 export class ListaTermos {
-
   constructor(termoApi) {
     this.termoApi = termoApi;
     this.termos = [];

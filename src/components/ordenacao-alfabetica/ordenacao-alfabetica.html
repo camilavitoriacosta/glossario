@@ -1,0 +1,8 @@
+<template>
+  <require from="./ordenacao-alfabetica.css"></require>
+  <select name="ordem-lista-termos" id="ordem-lista-termos" value.bind="tipoOrdenacaoSelecionado" change.delegate="ordenarTermos()">
+    <option repeat.for="tipo of tiposDeOrdenacao" model.bind="tipo">
+      ${tipo.label}
+    </option>
+  </select>
+</template>

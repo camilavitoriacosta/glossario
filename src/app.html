@@ -1,5 +1,9 @@
 <template>
   <require from = "./components/lista-termos/lista-termos"></require>
+  <require from = "./components/ordenacao-alfabetica/ordenacao-alfabetica"></require>
   <require from = "./app.css"></require>
-    <lista-termos></lista-termos>
+  <div class="container">
+    <ordenacao-alfabetica controlador-lista-termos.bind="listaTermos"></ordenacao-alfabetica>
+    <lista-termos view-model.ref="listaTermos"></lista-termos>
+  </div>
 </template>
