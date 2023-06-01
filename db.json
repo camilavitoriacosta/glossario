@@ -59,6 +59,96 @@
       "termo": "git remote",
       "descricao": "O comando git remote é utilizado para gerenciar conexões remotas do repositório, como adicionar, remover ou listar repositórios remotos.",
       "link": "https://git-scm.com/docs/git-remote"
+    },
+    {
+      "id": 11,
+      "termo": "API",
+      "descricao": "API (Application Programming Interface) é um conjunto de regras e protocolos que permite a comunicação entre diferentes softwares.",
+      "link": "https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces"
+    },
+    {
+      "id": 12,
+      "termo": "Framework",
+      "descricao": "Framework é um conjunto de bibliotecas, ferramentas e padrões que oferecem uma estrutura para facilitar o desenvolvimento de software.",
+      "link": "https://www.freecodecamp.org/news/what-is-a-framework-explained-with-examples-in-5-minutes/"
+    },
+    {
+      "id": 13,
+      "termo": "Banco de Dados",
+      "descricao": "Banco de Dados é um sistema que permite o armazenamento e a recuperação de informações de forma estruturada, geralmente utilizando tabelas.",
+      "link": "https://www.oracle.com/database/what-is-database/"
+    },
+    {
+      "id": 14,
+      "termo": "Backend",
+      "descricao": "Backend refere-se à parte de um sistema ou aplicativo que lida com o processamento de dados e a lógica de negócios, geralmente executado no servidor.",
+      "link": "https://www.freecodecamp.org/news/what-is-front-end-vs-back-end-development/"
+    },
+    {
+      "id": 15,
+      "termo": "Frontend",
+      "descricao": "Frontend refere-se à parte de um sistema ou aplicativo que lida com a interface do usuário e interações visíveis aos usuários, geralmente executado no navegador.",
+      "link": "https://www.freecodecamp.org/news/what-is-front-end-vs-back-end-development/"
+    },
+    {
+      "id": 16,
+      "termo": "Teste Unitário",
+      "descricao": "Teste Unitário é um tipo de teste de software que verifica se uma unidade individual de código funciona conforme o esperado.",
+      "link": "https://www.guru99.com/unit-testing-guide.html"
+    },
+    {
+      "id": 17,
+      "termo": "Agile",
+      "descricao": "Agile é um conjunto de valores e princípios para o desenvolvimento de software ágil, enfatizando a colaboração, a adaptação e a entrega contínua.",
+      "link": "https://agilemanifesto.org/"
+    },
+    {
+      "id": 18,
+      "termo": "Scrum",
+      "descricao": "Scrum é um framework ágil de gerenciamento de projetos que enfatiza a colaboração, a transparência e a entrega incremental de valor.",
+      "link": "https://www.scrum.org/resources/what-is-scrum"
+    },
+    {
+      "id": 19,
+      "termo": "DevOps",
+      "descricao": "DevOps é uma cultura e um conjunto de práticas que combina o desenvolvimento de software (Dev) e a operação de sistemas (Ops) para melhorar a colaboração e a entrega de software.",
+      "link": "https://aws.amazon.com/devops/what-is-devops/"
+    },
+    {
+      "id": 20,
+      "termo": "MVC",
+      "descricao": "MVC (Model-View-Controller) é um padrão arquitetural comumente usado no desenvolvimento de software para separar a lógica de negócios, a apresentação e a interação do usuário.",
+      "link": "https://www.freecodecamp.org/news/mvc-architecture-what-is-it-and-why-do-we-use-it/"
+    },
+    {
+      "id": 21,
+      "termo": "Shell Script",
+      "descricao": "Shell Script é uma linguagem de script utilizada em sistemas operacionais Unix-like para automatizar tarefas por meio do interpretador de comandos (shell).",
+      "link": "https://www.shellscript.sh/"
+    },
+    {
+      "id": 22,
+      "termo": "REST",
+      "descricao": "REST (Representational State Transfer) é um estilo de arquitetura de software utilizado para criar serviços web que são escaláveis, flexíveis e interoperáveis.",
+      "link": "https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api"
+    },
+    {
+      "id": 23,
+      "termo": "SQL",
+      "descricao": "SQL (Structured Query Language) é uma linguagem de programação utilizada para gerenciar e manipular bancos de dados relacionais.",
+      "link": "https://www.sqlcourse.com/intro.html"
+    },
+    {
+      "id": 24,
+      "termo": "ORM",
+      "descricao": "ORM (Object-Relational Mapping) é uma técnica que permite mapear objetos do código para tabelas de bancos de dados relacionais e vice-versa.",
+      "link": "https://www.devmedia.com.br/entendendo-orm-objetos-e-relacionamentos/18734"
+    },
+    {
+      "id": 25,
+      "termo": "Caching",
+      "descricao": "Caching é o processo de armazenar temporariamente dados frequentemente acessados em uma área de armazenamento de acesso mais rápido, melhorando a performance do sistema.",
+      "link": "https://www.cloudflare.com/learning/performance/caching/"
     }
   ]
 }
