@@ -1,0 +1,18 @@
+.container_filtro_alfabeto{
+  display: flex;
+}
+
+.filtro_letra_alfabeto__input {
+  display: none;
+}
+
+.filtro_letra_alfabeto__label {
+  padding: 5px;
+  cursor: pointer;
+  margin: 5px;
+  border-bottom: 2px solid #E8D0FA;
+}
+
+.filtro_letra_alfabeto__label:hover {
+  border-bottom: 2px solid #A367DE;
+}
