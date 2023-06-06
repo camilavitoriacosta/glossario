@@ -1,9 +1,12 @@
 <template>
   <require from = "./components/lista-termos/lista-termos"></require>
+  <require from = "./components/input-de-busca/input-de-busca"></require>
   <require from="./components/filtro-alfabetico/filtro-alfabetico"></require>
   <require from = "./components/ordenacao-alfabetica/ordenacao-alfabetica"></require>
   <require from = "./app.css"></require>
+  
   <div class="container">
+    <input-de-busca controlador-lista-termos.bind="listaTermos"></input-de-busca>
     <filtro-alfabetico controlador-lista-termos.bind="listaTermos"></filtro-alfabetico>
     <ordenacao-alfabetica controlador-lista-termos.bind="listaTermos"></ordenacao-alfabetica>
     <lista-termos view-model.ref="listaTermos"></lista-termos>

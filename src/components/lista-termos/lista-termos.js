@@ -3,7 +3,7 @@ import { TermoApi } from '../../termo-api';
 
 @inject(TermoApi)
 export class ListaTermos {
-
+  
   get possuiTermos(){
     return this.termos.length > 0;
   }
