@@ -7,3 +7,12 @@ body{
   width: 45vw;
   margin: 10px auto;
 }
+
+.btn__fundo-roxo-claro{
+  background-color: #E8D0FA;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  color:#602575;
+  cursor: pointer;
+}

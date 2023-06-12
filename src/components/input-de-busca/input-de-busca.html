@@ -1,5 +1,8 @@
 <template>
   <require from="./input-de-busca.css"></require>
 
-  <input type="text" placeholder="Busque por um termo" class="input__busca" value.bind="termoBuscado" keyup.delegate="buscar()">
+  <div class="linha">
+    <input type="text" placeholder="Busque por um termo" class="input__busca" value.bind="termoBuscado" keyup.delegate="buscar()">
+    <button class="btn__fundo-roxo-claro" click.delegate="limparBusca()"> Limpar </button>
+  </div>
 </template>

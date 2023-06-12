@@ -4,3 +4,8 @@
   border: none;
   padding: 5px;
 }
+
+.linha{
+  display: flex;
+  gap: 5px;
+}

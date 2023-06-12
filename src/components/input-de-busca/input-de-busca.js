@@ -21,4 +21,9 @@ export class InputDeBusca {
       termoAtual.termo.toUpperCase().includes(this.termoBuscado.toUpperCase())
     )
   }
+
+  limparBusca() {
+    this.termoBuscado = '';
+    this.controladorListaTermos.termos = this.termos;
+  }
 }
