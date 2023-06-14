@@ -1,0 +1,43 @@
+<template>
+  <require from="./dialogo-de-criacao-de-termo.css"></require>
+
+  <div class="modal">
+    <div class="modal__container">
+      <div class="modal__container__cabecalho">
+        <h1 class="modal__container__cabecalho__titulo">
+          Adicionar novo termo
+        </h1>
+        <button type="button" class="btn-fechar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+            viewBox="0 0 16 16">
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </button>
+      </div>
+      <hr>
+      <div class="modal__container__conteudo">
+        <div class="campo__formulario">
+          <label class="modal__container__conteudo__label"> Termo </label>
+          <input type="text" placeholder="Digite o termo" class="modal__container__conteudo__input" value.bind="termo">
+        </div>
+        <div class="campo__formulario">
+          <label class="modal__container__conteudo__label"> Descricao </label>
+          <textarea cols="30" rows="8" placeholder="Digite a descricao" class="modal__container__conteudo__input" value.bind="descricao" maxlength="400"></textarea>
+          
+          <span class="contador_campo_descricao">0/400</span>
+        </div>
+        <div class="campo__formulario">
+          <label class="modal__container__conteudo__label"> Link </label>
+          <input type="text" placeholder="Digite o link" class="modal__container__conteudo__input" value.bind="link">
+        </div>
+
+      </div>
+      <hr>
+      <div class="modal__container__rodape">
+        <button class="btn btn__outline-roxo-escuro"> Cancelar </button>
+        <button class="btn btn__fundo-roxo-escuro"> Adicionar </button>
+      </div>
+    </div>
+  </div>
+</template>
