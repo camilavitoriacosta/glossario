@@ -1,13 +1,13 @@
 <template>
   <require from="./dialogo-de-criacao-de-termo.css"></require>
 
-  <div class="modal">
+  <div class="modal" id="dialogoDeCriacaoDeTermo">
     <div class="modal__container">
       <div class="modal__container__cabecalho">
         <h1 class="modal__container__cabecalho__titulo">
           Adicionar novo termo
         </h1>
-        <button type="button" class="btn-fechar">
+        <button type="button" class="btn-fechar" click.delegate="fecharDialogo()">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
             viewBox="0 0 16 16">
             <path
@@ -35,8 +35,8 @@
       </div>
       <hr>
       <div class="modal__container__rodape">
-        <button class="btn btn__outline-roxo-escuro"> Cancelar </button>
-        <button class="btn btn__fundo-roxo-escuro"> Adicionar </button>
+        <button class="btn btn__outline-roxo-escuro"  click.delegate="fecharDialogo()"> Cancelar </button>
+        <button class="btn btn__fundo-roxo-escuro" click.delegate="adicionarTermo()"> Adicionar </button>
       </div>
     </div>
   </div>

@@ -11,4 +11,8 @@ export class TermoApi{
   obterTermos(){
     return this.api.get("/termos");
   }
+  
+  salvarTermo(termo){
+    return this.api.post("/termos/", termo);
+  }
 }
