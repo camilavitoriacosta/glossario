@@ -18,25 +18,27 @@
       <hr>
       <div class="modal__container__conteudo">
         <div class="campo__formulario">
-          <label class="modal__container__conteudo__label"> Termo </label>
+          <label class="modal__container__conteudo__label"> Termo* </label>
           <input type="text" placeholder="Digite o termo" class="modal__container__conteudo__input" value.bind="termo">
+          <span class="alerta" id="alerta-termo"></span>
         </div>
         <div class="campo__formulario">
-          <label class="modal__container__conteudo__label"> Descricao </label>
-          <textarea cols="30" rows="8" placeholder="Digite a descricao" class="modal__container__conteudo__input" value.bind="descricao" maxlength="400"></textarea>
-          
-          <span class="contador_campo_descricao">0/400</span>
+          <label class="modal__container__conteudo__label"> Descricao* </label>
+          <textarea cols="30" rows="8" placeholder="Digite a descricao" class="modal__container__conteudo__input"
+            value.bind="descricao" maxlength="400"></textarea>
+          <span class="contador_campo_descricao">${contadorCampoDescricao}/400</span>
+          <span class="alerta" id="alerta-descricao"></span>
         </div>
         <div class="campo__formulario">
-          <label class="modal__container__conteudo__label"> Link </label>
+          <label class="modal__container__conteudo__label"> Link* </label>
           <input type="text" placeholder="Digite o link" class="modal__container__conteudo__input" value.bind="link">
+          <span class="alerta" id="alerta-link"></span>
         </div>
-
       </div>
       <hr>
       <div class="modal__container__rodape">
-        <button class="btn btn__outline-roxo-escuro"  click.delegate="fecharDialogo()"> Cancelar </button>
-        <button class="btn btn__fundo-roxo-escuro" click.delegate="adicionarTermo()"> Adicionar </button>
+        <button class="btn btn__outline-roxo-escuro" click.delegate="fecharDialogo()"> Cancelar </button>
+        <button class="btn btn__fundo-roxo-escuro" click.delegate="adicionarTermo()" disabled.bind="!habilitarBotao"> Adicionar </button>
       </div>
     </div>
   </div>
