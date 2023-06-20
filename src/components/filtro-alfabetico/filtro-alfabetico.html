@@ -3,8 +3,8 @@
 
   <div class="container_filtro_alfabeto">
     <label repeat.for="letra of letrasAlfabeto" class="filtro_letra_alfabeto__label">
-      <input type="radio" name="filtro-alfabeto" class="filtro_letra_alfabeto__input"  model.bind="letra"
-        checked.bind="letraSelecionada"  change.delegate="filtrar()">
+      <input type="radio" name="filtro-alfabeto" class="filtro_letra_alfabeto__input" model.bind="letra"
+        checked.bind="letraSelecionada" change.delegate="filtrar()">
       ${letra}
     </label>
   </div>

@@ -1,12 +1,11 @@
-import {HttpClient} from 'aurelia-fetch-client';
+import { HttpClient, json } from 'aurelia-fetch-client';
 import { inject } from 'aurelia-framework';
-import { json } from 'aurelia-fetch-client';
 
 
 @inject(HttpClient)
-export class Api{
+export class Api {
 
-  constructor(http){
+  constructor(http) {
     this.http = http;
   }
 
@@ -15,7 +14,7 @@ export class Api{
       method: 'get',
     });
   }
-  
+
   post(url, corpo) {
     return this.http.fetch(this.obterEnderecoDoServidor() + url, {
       method: 'post',
@@ -23,7 +22,14 @@ export class Api{
     });
   }
 
-  obterEnderecoDoServidor(){
+  put(url, id, corpo) {
+    return this.http.fetch(this.obterEnderecoDoServidor() + url + id, {
+      method: 'put',
+      body: json(corpo)
+    });
+  }
+
+  obterEnderecoDoServidor() {
     return "http://localhost:3000";
   }
 }

@@ -11,7 +11,7 @@
     <input-de-busca termos-exibicao.two-way="termosExibicao" termos.bind="termos"></input-de-busca>
     <filtro-alfabetico termos-exibicao.two-way="termosExibicao" termos.bind="termos"></filtro-alfabetico>
     <ordenacao-alfabetica termos-exibicao.two-way="termosExibicao"></ordenacao-alfabetica>
-    <lista-termos termos.bind="termosExibicao"></lista-termos>
+    <lista-termos termos.bind="termosExibicao" dialogo-de-edicao-de-termo.bind="dialogoDeCriacaoDeTermo"></lista-termos>
     <dialogo-de-criacao-de-termo view-model.ref="dialogoDeCriacaoDeTermo"
       callback-de-adicao-de-termo.call="obterTermos()">
     </dialogo-de-criacao-de-termo>

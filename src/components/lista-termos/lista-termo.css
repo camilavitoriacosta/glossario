@@ -1,4 +1,4 @@
-.container-termo >  hr {
+.container-termo>hr {
   width: 100%;
   height: 1px;
   border: 0px;
@@ -28,7 +28,7 @@
   margin: 0;
 }
 
-.mensagem_nenhum_item{
+.mensagem_nenhum_item {
   background: #E8D0FA;
   color: #602575;
   padding: 10px;

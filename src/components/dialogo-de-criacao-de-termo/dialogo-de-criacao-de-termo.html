@@ -38,7 +38,10 @@
       <hr>
       <div class="modal__container__rodape">
         <button class="btn btn__outline-roxo-escuro" click.delegate="fecharDialogo()"> Cancelar </button>
-        <button class="btn btn__fundo-roxo-escuro" click.delegate="adicionarTermo()" disabled.bind="!habilitarBotao"> Adicionar </button>
+        <button class="btn btn__fundo-roxo-escuro" click.delegate="adicionarTermo()" disabled.bind="!habilitarBotao"
+          if.bind="!ehEdicao"> Adicionar </button>
+        <button if.bind="ehEdicao" class="btn btn__fundo-roxo-escuro" click.delegate="editarTermo()"
+          disabled.bind="!habilitarBotao"> Editar </button>
       </div>
     </div>
   </div>

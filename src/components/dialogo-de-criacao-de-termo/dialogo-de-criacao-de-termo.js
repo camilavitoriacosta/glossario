@@ -6,8 +6,10 @@ const _ = require("lodash");
 export class DialogoDeCriacaoDeTermo {
   @bindable callbackDeAdicaoDeTermo = () => { };
 
-  constructor(termoApi) {
-    this.termoApi = termoApi;
+
+  @computedFrom('idTermoParaEditar')
+  get ehEdicao() {
+    return this.idTermoParaEditar >= 0;
   }
 
   @computedFrom('descricao')
@@ -20,12 +22,25 @@ export class DialogoDeCriacaoDeTermo {
     return this.validarCamposFormulario();
   }
 
+  constructor(termoApi) {
+    this.termoApi = termoApi;
+    this.idTermoParaEditar = -1;
+  }
+
   abrirDialogo() {
     document.getElementById("dialogoDeCriacaoDeTermo").style.display = 'block';
     document.querySelectorAll('.alerta').forEach(alerta => {
       alerta.textContent = '';
       alerta.classList.remove('alerta-erro');
     });
+  }
+
+  abrirDialogoEdicao(termo) {
+    this.termo = termo.termo.termo;
+    this.descricao = termo.termo.descricao;
+    this.link = termo.termo.link;
+    this.idTermoParaEditar = termo.termo.id;
+    this.abrirDialogo();
   }
 
   fecharDialogo() {
@@ -41,6 +56,21 @@ export class DialogoDeCriacaoDeTermo {
     }
 
     this.termoApi.salvarTermo(termo).then(
+      () => {
+        this.fecharDialogo();
+        this.callbackDeAdicaoDeTermo();
+      }
+    );
+  }
+
+  editarTermo() {
+    const termo = {
+      "termo": this.termo,
+      "descricao": this.descricao,
+      "link": this.link
+    }
+
+    this.termoApi.editarTermo(this.idTermoParaEditar, termo).then(
       () => {
         this.fecharDialogo();
         this.callbackDeAdicaoDeTermo();

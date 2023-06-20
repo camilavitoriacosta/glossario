@@ -1,4 +1,4 @@
-import { inject, computedFrom } from 'aurelia-framework';
+import { inject } from 'aurelia-framework';
 import { TermoApi } from "./termo-api";
 
 @inject(TermoApi)
@@ -8,7 +8,7 @@ export class App {
     this.termos = [];
     this.termosExibicao = [];
   }
-  
+
   attached() {
     this.obterTermos();
   }
