@@ -1,15 +1,17 @@
-import { inject, computedFrom } from 'aurelia-framework';
+import { bindable, computedFrom, inject } from 'aurelia-framework';
 import { TermoApi } from "../../termo-api";
 const _ = require("lodash");
 
 @inject(TermoApi)
 export class DialogoDeCriacaoDeTermo {
+  @bindable callbackDeAdicaoDeTermo = () => { };
+
   constructor(termoApi) {
     this.termoApi = termoApi;
   }
 
   @computedFrom('descricao')
-  get contadorCampoDescricao(){
+  get contadorCampoDescricao() {
     return this.descricao ? this.descricao.length : 0;
   }
 
@@ -39,16 +41,16 @@ export class DialogoDeCriacaoDeTermo {
     }
 
     this.termoApi.salvarTermo(termo).then(
-      resposta => {
-        console.log(resposta);
+      () => {
         this.fecharDialogo();
+        this.callbackDeAdicaoDeTermo();
       }
     );
   }
 
   validarCamposFormulario() {
     const termoValido = this.validarCampoTexto(this.termo, 'alerta-termo');
-    const descricaoValida = this.validarCampoTexto(this.descricao, 'alerta-descricao' );
+    const descricaoValida = this.validarCampoTexto(this.descricao, 'alerta-descricao');
     const linkValido = this.validarCampoTexto(this.link, 'alerta-link');
     return termoValido && descricaoValida && linkValido;
   }

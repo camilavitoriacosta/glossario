@@ -1,29 +1,18 @@
-import { bindable, inject } from 'aurelia-framework';
-import { TermoApi } from '../../termo-api';
+import { bindable } from 'aurelia-framework';
 
-
-@inject(TermoApi)
 export class InputDeBusca {
   @bindable controladorListaTermos;
-
-  constructor(termoApi) {
-    this.termoApi = termoApi;
-  }
-
-  attached() {
-    this.termoApi.obterTermos().then(resposta => resposta.json()).then(resposta => {
-      this.termos = resposta;
-    });
-  }
+  @bindable termos;
+  @bindable termosExibicao;
 
   buscar() {
-    this.controladorListaTermos.termos = this.termos.filter(termoAtual =>
+    this.termosExibicao = this.termos.filter(termoAtual =>
       termoAtual.termo.toUpperCase().includes(this.termoBuscado.toUpperCase())
     )
   }
 
   limparBusca() {
     this.termoBuscado = '';
-    this.controladorListaTermos.termos = this.termos;
+    this.termosExibicao = this.termos;
   }
 }

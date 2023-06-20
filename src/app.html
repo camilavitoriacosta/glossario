@@ -1,17 +1,19 @@
 <template>
-  <require from = "./components/lista-termos/lista-termos"></require>
-  <require from = "./components/input-de-busca/input-de-busca"></require>
+  <require from="./components/lista-termos/lista-termos"></require>
+  <require from="./components/input-de-busca/input-de-busca"></require>
   <require from="./components/filtro-alfabetico/filtro-alfabetico"></require>
-  <require from = "./components/ordenacao-alfabetica/ordenacao-alfabetica"></require>
-  <require from = "./components/dialogo-de-criacao-de-termo/dialogo-de-criacao-de-termo"></require>
-  <require from = "./app.css"></require>
-  
+  <require from="./components/ordenacao-alfabetica/ordenacao-alfabetica"></require>
+  <require from="./components/dialogo-de-criacao-de-termo/dialogo-de-criacao-de-termo"></require>
+  <require from="./app.css"></require>
+
   <div class="container">
     <button class="btn btn__fundo-roxo-escuro" click.delegate="abrirDialogo()"> Adicionar termo </button>
-    <input-de-busca controlador-lista-termos.bind="listaTermos"></input-de-busca>
-    <filtro-alfabetico controlador-lista-termos.bind="listaTermos"></filtro-alfabetico>
-    <ordenacao-alfabetica controlador-lista-termos.bind="listaTermos"></ordenacao-alfabetica>
-    <lista-termos view-model.ref="listaTermos"></lista-termos>
-    <dialogo-de-criacao-de-termo view-model.ref="dialogoDeCriacaoDeTermo"></dialogo-de-criacao-de-termo>
+    <input-de-busca termos-exibicao.two-way="termosExibicao" termos.bind="termos"></input-de-busca>
+    <filtro-alfabetico termos-exibicao.two-way="termosExibicao" termos.bind="termos"></filtro-alfabetico>
+    <ordenacao-alfabetica termos-exibicao.two-way="termosExibicao"></ordenacao-alfabetica>
+    <lista-termos termos.bind="termosExibicao"></lista-termos>
+    <dialogo-de-criacao-de-termo view-model.ref="dialogoDeCriacaoDeTermo"
+      callback-de-adicao-de-termo.call="obterTermos()">
+    </dialogo-de-criacao-de-termo>
   </div>
 </template>
