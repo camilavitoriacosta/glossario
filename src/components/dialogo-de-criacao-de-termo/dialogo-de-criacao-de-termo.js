@@ -107,5 +107,6 @@ export class DialogoDeCriacaoDeTermo {
     this.termo = '';
     this.descricao = '';
     this.link = '';
+    this.idTermoParaEditar = -1;
   }
 }
