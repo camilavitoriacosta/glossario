@@ -9,8 +9,10 @@ namespace Glossario.Controllers
     public class TermoController : ControllerBase
     {
         private readonly ITermoService _termoService;
-        public TermoController() { 
+        public TermoController(ITermoService termoService) { 
+            _termoService = termoService;
         }
+
         [HttpGet]
         public ActionResult ObterTermos()
         {

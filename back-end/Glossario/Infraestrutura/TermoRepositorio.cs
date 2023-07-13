@@ -1,8 +1,9 @@
 ﻿using Glossario.Dominio;
+using ISession = NHibernate.ISession;
 
 namespace Glossario.Infraestrutura
 {
-    public class TermoRepositorio
+    public class TermoRepositorio :ITermoRepositorio
     {
         private readonly ISession _session;
 

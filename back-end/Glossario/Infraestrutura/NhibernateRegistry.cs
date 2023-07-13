@@ -8,7 +8,7 @@ namespace Projeto.Infra
     {
         public static void ObterSessionFactory(IServiceCollection services)
         {
-            var connStr = @"Server=localhost;Database=glossario;User Id=sa;Password=123;";
+            var connStr = @"Server=localhost;Database=glossario;User Id=sa;Password=PapelZero.123;";
 
             var sessionFactory = Fluently.Configure()
                 .Database(MsSqlConfiguration.MsSql2012.ConnectionString(connStr))

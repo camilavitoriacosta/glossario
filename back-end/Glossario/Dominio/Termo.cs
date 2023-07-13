@@ -2,9 +2,9 @@
 {
     public class Termo
     {
-        public int Id { get; set; }
-        public string Titulo { get; set; }
-        public string Descricao { get; set; }
-        public string Link { get; set; }
+        public virtual int Id { get; set; }
+        public virtual string Titulo { get; set; }
+        public virtual string Descricao { get; set; }
+        public virtual string Link { get; set; }
     }
 }
