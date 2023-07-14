@@ -5,6 +5,8 @@ namespace Glossario.Aplicação
 {
     public interface ITermoService
     {
-        public Termo cadastrar(TermoDto termo);
+        public Termo Cadastrar(TermoDto termo);
+        public Termo Atualizar(TermoDto termo);
+        public List<Termo> ObterTodosTermos();
     }
 }

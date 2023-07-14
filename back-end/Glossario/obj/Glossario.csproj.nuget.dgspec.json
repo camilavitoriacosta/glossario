@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\glossario\\back-end\\Glossario\\Glossario.csproj": {}
+    "C:\\Users\\vivim\\Desktop\\Projetos\\PDI\\glossario\\back-end\\Glossario\\Glossario.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\glossario\\back-end\\Glossario\\Glossario.csproj": {
+    "C:\\Users\\vivim\\Desktop\\Projetos\\PDI\\glossario\\back-end\\Glossario\\Glossario.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\glossario\\back-end\\Glossario\\Glossario.csproj",
+        "projectUniqueName": "C:\\Users\\vivim\\Desktop\\Projetos\\PDI\\glossario\\back-end\\Glossario\\Glossario.csproj",
         "projectName": "Glossario",
-        "projectPath": "C:\\Projetos\\glossario\\back-end\\Glossario\\Glossario.csproj",
-        "packagesPath": "C:\\Users\\CamilaVitoriaCarneir\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\glossario\\back-end\\Glossario\\obj\\",
+        "projectPath": "C:\\Users\\vivim\\Desktop\\Projetos\\PDI\\glossario\\back-end\\Glossario\\Glossario.csproj",
+        "packagesPath": "C:\\Users\\vivim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vivim\\Desktop\\Projetos\\PDI\\glossario\\back-end\\Glossario\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\CamilaVitoriaCarneir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vivim\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/solucoesdigix/Projetos/_packaging/Digix/nuget/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
