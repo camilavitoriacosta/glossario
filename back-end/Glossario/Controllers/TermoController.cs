@@ -16,13 +16,21 @@ namespace Glossario.Controllers
         [HttpGet]
         public ActionResult ObterTermos()
         {
-            return Ok();
+            var termos = _termoService.ObterTodosTermos();
+            return Ok(termos);
         }
 
         [HttpPost]
         public ActionResult AdicionarTermo([FromBody] TermoDto termodto)
         {
-            var termo = _termoService.cadastrar(termodto);
+            var termo = _termoService.Cadastrar(termodto);
+            return Ok(termo);
+        }
+        
+        [HttpPut]
+        public ActionResult AtualizarTermo([FromBody] TermoDto termodto)
+        {
+            var termo = _termoService.Atualizar(termodto);
             return Ok(termo);
         }
     }

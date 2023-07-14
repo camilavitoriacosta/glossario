@@ -12,21 +12,28 @@ namespace Glossario.Aplicação
             _termoRepositorio = termoRepositorio;
         }
 
-        public Termo cadastrar(TermoDto termoDto)
+        public Termo Cadastrar(TermoDto termoDto)
         {
             var termo = MapearDtoParaEntidade(termoDto);
             _termoRepositorio.Salvar(termo);
             return termo;
         }
+        
+        public Termo Atualizar(TermoDto termoDto)
+        {
+            var termo = MapearDtoParaEntidade(termoDto);
+            _termoRepositorio.Atualizar(termo);
+            return termo;
+        }
+
+        public List<Termo> ObterTodosTermos()
+        {
+            return _termoRepositorio.ObterTodos();
+        }
 
         private Termo MapearDtoParaEntidade(TermoDto termoDto)
         {
-            return new Termo
-            {
-                Titulo = termoDto.Titulo,
-                Descricao = termoDto.Descricao,
-                Link = termoDto.Link
-            };
+            return new Termo(termoDto.Titulo, termoDto.Descricao, termoDto.Link);
         }
     }
 }
