@@ -19,9 +19,8 @@ namespace Glossario.Aplicação
             return termo;
         }
         
-        public Termo Atualizar(TermoDto termoDto)
+        public Termo Atualizar(Termo termo)
         {
-            var termo = MapearDtoParaEntidade(termoDto);
             _termoRepositorio.Atualizar(termo);
             return termo;
         }

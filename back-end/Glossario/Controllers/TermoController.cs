@@ -1,5 +1,6 @@
 ﻿using Glossario.Aplicação;
 using Glossario.Aplicação.Dtos;
+using Glossario.Dominio;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Glossario.Controllers
@@ -28,9 +29,9 @@ namespace Glossario.Controllers
         }
         
         [HttpPut]
-        public ActionResult AtualizarTermo([FromBody] TermoDto termodto)
+        public ActionResult AtualizarTermo([FromBody] Termo termo)
         {
-            var termo = _termoService.Atualizar(termodto);
+            _termoService.Atualizar(termo);
             return Ok(termo);
         }
     }
