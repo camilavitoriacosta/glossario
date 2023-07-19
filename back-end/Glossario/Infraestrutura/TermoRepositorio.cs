@@ -1,4 +1,5 @@
 ﻿using Glossario.Dominio;
+using System.Collections.Generic;
 using ISession = NHibernate.ISession;
 
 namespace Glossario.Infraestrutura
@@ -40,6 +41,20 @@ namespace Glossario.Infraestrutura
                     transacao.Rollback();
                     throw;
                 }
+        }
+
+        public Termo ObterPor(string titulo)
+        {
+            using (var transacao = _session.BeginTransaction())
+            try
+            {
+                return _session.Query<Termo>().Where(termo => termo.Titulo == titulo).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                transacao.Rollback();
+                throw;
+            }
         }
 
         public void Salvar(Termo termo)
