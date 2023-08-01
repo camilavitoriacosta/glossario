@@ -22,14 +22,14 @@ export class Api {
     });
   }
 
-  put(url, id, corpo) {
-    return this.http.fetch(this.obterEnderecoDoServidor() + url + id, {
+  put(url, corpo) {
+    return this.http.fetch(this.obterEnderecoDoServidor() + url, {
       method: 'put',
       body: json(corpo)
     });
   }
 
-  obterEnderecoDoServidor() {
-    return "http://localhost:3000";
-  }
+  obterEnderecoDoServidor(){
+    return "https://localhost:7088/api/";
+  }  
 }

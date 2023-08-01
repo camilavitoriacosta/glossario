@@ -16,6 +16,6 @@ export class FiltroAlfabetico {
   }
 
   filtrar() {
-    this.termosExibicao = this.termos.filter(termo => termo.termo.charAt(0).toUpperCase() == this.letraSelecionada);
+    this.termosExibicao = this.termos.filter(termo => termo.titulo.charAt(0).toUpperCase() == this.letraSelecionada);
   }
 }

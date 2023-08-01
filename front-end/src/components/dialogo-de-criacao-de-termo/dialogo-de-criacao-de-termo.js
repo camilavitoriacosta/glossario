@@ -17,7 +17,7 @@ export class DialogoDeCriacaoDeTermo {
     return this.descricao ? this.descricao.length : 0;
   }
 
-  @computedFrom('termo', 'descricao', 'link')
+  @computedFrom('titulo', 'descricao', 'link')
   get habilitarBotao() {
     return this.validarCamposFormulario();
   }
@@ -36,7 +36,7 @@ export class DialogoDeCriacaoDeTermo {
   }
 
   abrirDialogoEdicao(termo) {
-    this.termo = termo.termo.termo;
+    this.titulo = termo.termo.titulo;
     this.descricao = termo.termo.descricao;
     this.link = termo.termo.link;
     this.idTermoParaEditar = termo.termo.id;
@@ -50,7 +50,7 @@ export class DialogoDeCriacaoDeTermo {
 
   adicionarTermo() {
     const termo = {
-      "termo": this.termo,
+      "titulo": this.titulo,
       "descricao": this.descricao,
       "link": this.link
     }
@@ -65,12 +65,13 @@ export class DialogoDeCriacaoDeTermo {
 
   editarTermo() {
     const termo = {
-      "termo": this.termo,
+      "id": this.idTermoParaEditar,
+      "titulo": this.titulo,
       "descricao": this.descricao,
       "link": this.link
     }
 
-    this.termoApi.editarTermo(this.idTermoParaEditar, termo).then(
+    this.termoApi.editarTermo(termo).then(
       () => {
         this.fecharDialogo();
         this.callbackDeAdicaoDeTermo();
@@ -79,7 +80,7 @@ export class DialogoDeCriacaoDeTermo {
   }
 
   validarCamposFormulario() {
-    const termoValido = this.validarCampoTexto(this.termo, 'alerta-termo');
+    const termoValido = this.validarCampoTexto(this.titulo, 'alerta-termo');
     const descricaoValida = this.validarCampoTexto(this.descricao, 'alerta-descricao');
     const linkValido = this.validarCampoTexto(this.link, 'alerta-link');
     return termoValido && descricaoValida && linkValido;
@@ -104,7 +105,7 @@ export class DialogoDeCriacaoDeTermo {
   }
 
   limparVariaveis() {
-    this.termo = '';
+    this.titulo = '';
     this.descricao = '';
     this.link = '';
     this.idTermoParaEditar = -1;

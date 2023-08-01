@@ -7,7 +7,7 @@ export class InputDeBusca {
 
   buscar() {
     this.termosExibicao = this.termos.filter(termoAtual =>
-      termoAtual.termo.toUpperCase().includes(this.termoBuscado.toUpperCase())
+      termoAtual.titulo.toUpperCase().includes(this.termoBuscado.toUpperCase())
     )
   }
 

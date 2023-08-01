@@ -30,6 +30,11 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+// Add CORS middleware
+app.UseCors(builder => builder.AllowAnyOrigin()
+                              .AllowAnyMethod()
+                              .AllowAnyHeader());
+
 app.MapControllers();
 
 app.Run();

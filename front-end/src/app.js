@@ -19,7 +19,7 @@ export class App {
       this.termos.forEach(elemento => {
         elemento.termo =  _.capitalize(elemento.termo);
       });
-      this.termos = _.orderBy(this.termos, ['termo'], ['asc']);
+      this.termos = _.orderBy(this.termos, ['titulo'], ['asc']);
       this.termosExibicao = this.termos;
     });
   }
