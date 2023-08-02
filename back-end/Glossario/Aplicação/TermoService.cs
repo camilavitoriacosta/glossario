@@ -15,31 +15,31 @@ namespace Glossario.Aplicação
 
         public Termo Cadastrar(TermoDto termoDto)
         {
+            ValidarSeTermoExiste(termoDto.Titulo);
             var termo = MapearDtoParaEntidade(termoDto);
-            VerificarCamposObrigatorios(termo);
-            VerificarSeTermoJaExiste(termo);
             _termoRepositorio.Salvar(termo);
             return termo;
         }
 
-        private void VerificarSeTermoJaExiste(Termo termo)
+        private void ValidarSeTermoExiste(string titulo)
         {
-            bool condicao = _termoRepositorio.ObterPor(termo.Titulo) != null;
-            new Excecao(MensagemDeExcecao.TermoJaExiste).Quando(condicao);
+            new Excecao(MensagemDeExcecao.TermoJaExiste).Quando(_termoRepositorio.ObterPor(titulo) != null);
         }
 
-        private void VerificarCamposObrigatorios(Termo termo)
+        public Termo Atualizar(TermoParaAtualizarDto termoParaAtualizarDto)
         {
-            new Excecao(MensagemDeExcecao.NomeObrigatorio).QuandoEhStringVaziaOuNula(termo.Titulo);
-            new Excecao(MensagemDeExcecao.DescricaoObrigatorio).QuandoEhStringVaziaOuNula(termo.Descricao);
-            new Excecao(MensagemDeExcecao.LinkObrigatorio).QuandoEhStringVaziaOuNula(termo.Link);
-        }
-
-        public Termo Atualizar(Termo termo)
-        {
-            VerificarCamposObrigatorios(termo);
+            Termo termo = _termoRepositorio.ObterPor(termoParaAtualizarDto.Id);
+            ValidarSeTermoEhNulo(termo);
+            termo.AlterarTitulo(termoParaAtualizarDto.Titulo);
+            termo.AlterarDescricao(termoParaAtualizarDto.Descricao);
+            termo.AlterarLink(termoParaAtualizarDto.Link);
             _termoRepositorio.Atualizar(termo);
             return termo;
+        }
+
+        private void ValidarSeTermoEhNulo(Termo termo)
+        {
+            new Excecao(MensagemDeExcecao.TermoNaoExiste).Quando(termo == null);
         }
 
         public List<Termo> ObterTodosTermos()

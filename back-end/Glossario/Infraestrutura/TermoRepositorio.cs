@@ -71,5 +71,19 @@ namespace Glossario.Infraestrutura
                 throw;
             }
         }
+
+        public Termo ObterPor(int id)
+        {
+            using (var transacao = _session.BeginTransaction())
+                try
+                {
+                    return _session.Query<Termo>().Where(termo => termo.Id == id).SingleOrDefault();
+                }
+                catch (Exception ex)
+                {
+                    transacao.Rollback();
+                    throw;
+                }
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace Glossario.Controllers
         }
         
         [HttpPut]
-        public ActionResult AtualizarTermo([FromBody] Termo termo)
+        public ActionResult AtualizarTermo([FromBody] TermoParaAtualizarDto termo)
         {
             _termoService.Atualizar(termo);
             return Ok(termo);
