@@ -1,6 +1,9 @@
-﻿namespace Glossario.Dominio
+﻿using Glossario.Dominio;
+
+namespace Glossario.Infraestrutura
 {
-    public interface ITermoRepositorio {
+    public interface ITermoRepositorio
+    {
         List<Termo> ObterTodos();
         public void Salvar(Termo termo);
         public void Atualizar(Termo termo);

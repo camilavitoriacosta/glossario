@@ -1,4 +1,4 @@
-﻿using Glossario.Aplicação.Dtos;
+﻿using Glossario.Aplicacao.Dtos;
 using Glossario.Comum;
 using Glossario.Dominio;
 using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;

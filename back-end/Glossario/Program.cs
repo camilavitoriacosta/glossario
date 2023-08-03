@@ -1,5 +1,4 @@
-using Glossario.Aplicação;
-using Glossario.Dominio;
+using Glossario.Aplicacao;
 using Glossario.Infraestrutura;
 using Projeto.Infra;
 

@@ -1,12 +1,12 @@
 ﻿using ExpectedObjects;
-using Glossario.Aplicação;
-using Glossario.Aplicação.Dtos;
+using Glossario.Aplicacao;
+using Glossario.Aplicacao.Dtos;
 using Glossario.Comum;
 using Glossario.Dominio;
+using Glossario.Infraestrutura;
 using NSubstitute;
 using NSubstitute.ReturnsExtensions;
 using NUnit.Framework;
-using System.Diagnostics;
 
 namespace Glossario.Testes.Aplicacao
 {
@@ -94,7 +94,7 @@ namespace Glossario.Testes.Aplicacao
         [Test]
         public void Nao_deve_atualizar_um_termo_que_nao_existe()
         {
-            _termoRepositorio.ObterPor(_termoDto.Titulo).ReturnsNull();
+            _termoRepositorio.ObterPor(Arg.Any<int>()).ReturnsNull();
 
             TestDelegate acao = () => _termoService.Atualizar(_termoParaAtualizarDto);
 

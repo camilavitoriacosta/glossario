@@ -1,8 +1,9 @@
-﻿using Glossario.Aplicação.Dtos;
+﻿using Glossario.Aplicacao.Dtos;
 using Glossario.Comum;
 using Glossario.Dominio;
+using Glossario.Infraestrutura;
 
-namespace Glossario.Aplicação
+namespace Glossario.Aplicacao
 {
     public class TermoService : ITermoService
     {

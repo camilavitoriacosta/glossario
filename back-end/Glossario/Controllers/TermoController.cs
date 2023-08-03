@@ -1,5 +1,5 @@
-﻿using Glossario.Aplicação;
-using Glossario.Aplicação.Dtos;
+﻿using Glossario.Aplicacao;
+using Glossario.Aplicacao.Dtos;
 using Glossario.Dominio;
 using Microsoft.AspNetCore.Mvc;
 

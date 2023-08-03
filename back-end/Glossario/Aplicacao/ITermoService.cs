@@ -1,7 +1,7 @@
-﻿using Glossario.Aplicação.Dtos;
+﻿using Glossario.Aplicacao.Dtos;
 using Glossario.Dominio;
 
-namespace Glossario.Aplicação
+namespace Glossario.Aplicacao
 {
     public interface ITermoService
     {
